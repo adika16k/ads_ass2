@@ -17,4 +17,10 @@ public class MyArrayList {
     public int get(int index){
         return array[index];
     }
+    public void remove(int index) {
+        for (int i = index + 1; i < size; i++) {
+            array[i - 1] = array[i];
+        }
+        size--;
+    }
 }
