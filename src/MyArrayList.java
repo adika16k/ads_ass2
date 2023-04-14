@@ -14,4 +14,7 @@ public class MyArrayList {
         }
         array = newArray;
     }
+    public int get(int index){
+        return array[index];
+    }
 }
