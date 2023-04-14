@@ -4,8 +4,9 @@ public class MyArrayList {
 
     public void add(int element){
         if (size == array.length){
-
+            changeSize();
         }
+        array[size++] = element;
     }
     public void changeSize(){
         int[] newArray = new int[array.length * 2];
