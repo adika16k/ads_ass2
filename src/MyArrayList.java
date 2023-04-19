@@ -71,11 +71,15 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public void removeLast() {
-
+        size--;
     }
 
     @Override
     public void removeFirst() {
-
+        for (int i=0; i<size-1;i++){
+            array[i] = array[i+1];
+        }
+        size--;
+    }
     }
 }
