@@ -1,7 +1,19 @@
-public class MyLinkedList implements MyList {
+public class MyLinkedList<T> implements MyList<T> {
 
+    private Node<T> head;
+    private Node<T> tail;
+    private int size;
+
+    public MyLinkedList(){
+        head = null;
+        size = 0;
+    }
     private static class Node<E>{
-
+        E data;
+        Node<E> next;
+        Node(E data){
+            this.data = data;
+        }
     }
 
     @Override
@@ -25,7 +37,7 @@ public class MyLinkedList implements MyList {
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
         return null;
     }
 
