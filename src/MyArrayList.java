@@ -14,7 +14,11 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public void changeSize() {
-
+        Object[] newArray = new Object[array.length * 2];
+        for (int i=0; i< array.length; i++){
+            newArray[i] = array[i];
+        }
+        array = newArray;
     }
 
     @Override
