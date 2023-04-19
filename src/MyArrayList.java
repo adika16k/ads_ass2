@@ -1,7 +1,12 @@
 
 public class MyArrayList<T> {
     private Object[] array;
-    private int size = 0;
+    private int size;
+
+    MyArrayList(){
+        this.array = new Object[5];
+        this.size = 0;
+    }
 
     public void add(T element){
         if (size == array.length){
@@ -29,12 +34,13 @@ public class MyArrayList<T> {
         return size;
     }
     public void sort(){
-        int arr[];
         int temp = 0;
         for (int i=0;i<array.length;i++){
             for(int j=0;j< array.length-1;j++){
-                if (array[j-1] > array[j]){
-
+                if ((int) array[j-1] > (int) array[j]){
+                    temp = (int) array[j-1];
+                    array[j-1] = array[j];
+                    array[j] = temp;
                 }
             }
         }
