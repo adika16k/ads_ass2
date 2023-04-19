@@ -9,7 +9,10 @@ public class MyArrayList<T> implements Mylist1<T> {
     }
     @Override
     public void add(T element) {
-
+        if (size == array.length){
+            changeSize();
+        }
+        array[size++] = element;
     }
 
     @Override
