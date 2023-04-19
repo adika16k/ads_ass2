@@ -6,6 +6,12 @@ public class Main {
         arrayList.add(41);
         arrayList.add(85);
         arrayList.add(8);
-        System.out.print(arrayList.get(2));
+        System.out.println("Before adding:");
+        arrayList.displayElements();
+        System.out.println();
+
+        System.out.println("After adding:");
+        arrayList.add(4);
+        arrayList.displayElements();
     }
 }

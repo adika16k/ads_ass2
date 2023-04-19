@@ -21,6 +21,11 @@ public class MyArrayList<T> {
         }
         array = newArray;
     }
+    public void displayElements() {
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
     public T get(int index){
         return (T) array[index];
     }
