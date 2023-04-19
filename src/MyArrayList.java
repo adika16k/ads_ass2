@@ -33,7 +33,7 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public T get(int index) {
-        return null;
+        return (T) array[index];
     }
 
     @Override
