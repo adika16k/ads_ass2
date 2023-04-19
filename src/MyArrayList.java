@@ -26,7 +26,9 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public void displayElements() {
-
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i] + " ");
+        }
     }
 
     @Override
