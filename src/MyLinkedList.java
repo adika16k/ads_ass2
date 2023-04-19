@@ -22,12 +22,19 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public void add(Object item) {
-
+    public void add(T item) {
+        Node<T> newNode = new Node<>(item);
+        if (head == null){
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
     }
 
     @Override
-    public boolean remove(Object item) {
+    public boolean remove(T item) {
         return false;
     }
 
@@ -38,7 +45,11 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public T get(int index) {
-        return null;
+        Node<T> current = head;
+        for (int i =0; i < index; i++){
+            current = current.next;
+        }
+        return current.data;
     }
 
     @Override
@@ -53,6 +64,4 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void removeLast() {
-
-    }
 }
