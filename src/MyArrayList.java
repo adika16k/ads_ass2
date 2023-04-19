@@ -38,7 +38,8 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public void clear() {
-
+        this.array = (T[]) new Object[5];
+        this.size = 0;
     }
 
     @Override
