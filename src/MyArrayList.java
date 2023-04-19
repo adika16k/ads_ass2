@@ -81,5 +81,4 @@ public class MyArrayList<T> implements Mylist1<T> {
         }
         size--;
     }
-    }
 }
