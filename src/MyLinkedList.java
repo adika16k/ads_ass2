@@ -59,7 +59,12 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void removeFirst() {
-
+        if (head == tail){
+            head = tail = null;
+        } else{
+            head = head.next;
+        }
+        size--;
     }
 
     @Override
