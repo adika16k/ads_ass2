@@ -57,7 +57,16 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public void sort() {
-
+        int temp = 0;
+        for (int i=0;i<array.length;i++){
+            for(int j=1;j< array.length-i;j++){
+                if (array[j-1] != null && array[j] != null && (int) array[j-1] > (int) array[j]){
+                    temp = (int) array[j-1];
+                    array[j-1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
     }
 
     @Override
