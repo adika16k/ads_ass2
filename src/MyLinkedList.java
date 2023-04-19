@@ -69,4 +69,17 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void removeLast() {
+        if (head == tail){
+            head = tail = null;
+        } else {
+            Node<T> current = head;
+            while (current.next != tail){
+                current = current.next;
+            }
+            tail = current;
+            tail.next = null;
+        }
+        size--;
+    }
+    }
 }
