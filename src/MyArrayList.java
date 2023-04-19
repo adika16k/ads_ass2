@@ -52,7 +52,7 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public int getSize() {
-        return 0;
+        return size;
     }
 
     @Override
