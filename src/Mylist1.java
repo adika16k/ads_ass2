@@ -9,4 +9,5 @@ public interface Mylist1<T> {
     void sort();
     void removeLast();
     void removeFirst();
+    void deleteDuplicate();
 }

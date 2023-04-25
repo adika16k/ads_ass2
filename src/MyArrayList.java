@@ -4,7 +4,7 @@ public class MyArrayList<T> implements Mylist1<T> {
     private int size; // size its length of array
 
     MyArrayList(){
-        this.array = new Object[5];
+        this.array = new Object[10];
         this.size = 0;
     }
     @Override
@@ -80,5 +80,14 @@ public class MyArrayList<T> implements Mylist1<T> {
             array[i] = array[i+1]; // it's method to remove first element of array
         }
         size--;
+    }
+
+    @Override
+    public void deleteDuplicate() {
+        for (int i=0; i< size; i++){
+            for (int j=1; j< size+1; j++)
+            if (array[i] == array[j] && j>i)
+                remove(j);
+        }
     }
 }

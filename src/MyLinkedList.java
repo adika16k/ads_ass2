@@ -83,4 +83,13 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         size--;
     }
+
+    @Override
+    public void deleteDuplicate() {
+        for (int i=0; i<size;i++){
+            if(head==tail){
+
+            }
+        }
+    }
 }
